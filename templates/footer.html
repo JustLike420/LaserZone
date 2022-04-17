@@ -1,0 +1,23 @@
+{% load static %}
+<footer class="footer index-page__footer wow animate__animated animate__fadeInUp"><a href="./index.html"
+                                                                                     class="logo-link">
+    <picture>
+        <source srcset="{% static 'img/logotypes/logo.webp' %}" type="image/webp">
+        <img src="{% static 'img/logotypes/logo.png' %}" alt="Laser Zone" class="logo footer__logo"></picture>
+</a>
+    <nav class="nav footer__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#price" class="nav__link nav__link--active">Стоимость услуг</a></li>
+            <li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link">Акции</a></li>
+            <li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Франшиза</a></li>
+        </ul>
+    </nav>
+    <button type="button" class="footer__button button--map"><img src="{% static 'img/icons/geo.svg' %}"
+                                                                  alt="Местоположение"
+                                                                  width="24" height="24" class="footer__geo">
+        Петрозаводск
+    </button>
+</footer>
+<img src="{% static 'img/logotypes/cidgital_logo.svg' %}" alt="cidgital"
+     class="production-logo wow animate__animated animate__fadeInUp">

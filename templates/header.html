@@ -1,0 +1,46 @@
+{% load static %}
+<header class="header animate__animated animate__fadeInDown"><a href="{% url 'index' %}" class="logo-link">
+    <picture>
+        <source srcset="{% static 'img/logotypes/logo.svg' %}" type="image/svg">
+        <img src="{% static 'img/logotypes/logo.png' %}" alt="Laser zone" width="157" height="36"
+             class="header__logo">
+    </picture>
+</a>
+    <nav class="nav header__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#price" class="nav__link nav__link--active">Стоимость услуг</a>
+            </li>
+            <li class="nav__item"><a href="{% url 'benefits'%}" class="nav__link">Акции</a></li>
+            <li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
+        </ul>
+    </nav>
+    <div class="header__ap"><p class="header__adress button--map">Петрозаводск,<br>ул. Попова, д. 13А</p>
+        <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8
+            902
+            771-69-74</a></p>
+            <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+        <div class="header__right"><a class="header__tel" href="tel:+79027716974"><img
+                src="{% static 'img/icons/dark-call.svg' %}" alt="Телефон" width="24px" height="24px"
+                class="header__tel"> </a>
+            <button class="header__burger"><img src="{% static 'img/icons/menu.svg' %}" alt="Открыть меню"
+                                                width="24px"
+                                                height="24px"></button>
+        </div>
+    </div>
+    <div class="header__mobile">
+        <nav class="nav header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#price" class="nav__link nav__link--active">Стоимость
+                    услуг</a>
+                </li>
+                <li class="nav__item"><a href="./benefits.html" class="nav__link">Акции</a></li>
+                <li class="nav__item"><a href="./news.html" class="nav__link">Новости</a></li>
+            </ul>
+        </nav>
+        <p class="header__adress">Петрозаводск,<br>ул.Попова, д. 13А</p>
+        <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8
+            902
+            771-69-74</a></p>
+            <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+    </div>
+</header>

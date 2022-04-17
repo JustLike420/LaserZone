@@ -1,0 +1,1009 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body class="index-page">
+    <div class="header-promo">
+        <svg class="promo__wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                  d="M0,160L120,133.3C240,107,480,53,720,69.3C960,85,1200,171,1320,213.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+        <div class="container">
+            {% include 'header.html' %}
+            <section class="promo">
+                <div class="promo__left"><h1 class="promo__title">Laser Zone - твой выбор</h1>
+                    <p class="promo__text">Лазерная эпиляция - самый эффективный способ удаления волос</p>
+                    <div class="promo__buttons promo__buttons--1">
+                        <button class="button button--sign promo__button ms_booking">Записаться</button>
+                        <button onclick="window.open(`https://api.whatsapp.com/send/?phone=79027716974`)"
+                                class="button button--whatsapp promo__button">Написать в WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <picture>
+                    <source srcset="{% static 'img/content-images/promo-woman.webp' %}" type="image/webp">
+                    <img src="{% static 'img/content-images/promo-woman.png' %}" alt="Laser Zone" class="promo__img">
+                </picture>
+                <div class="promo__numbers">
+                    <ul class="promo__list">
+                        <li class="promo__item"><p class="promo__number">3000+</p>
+                            <h2 class="promo__description">Довольных клиентов</h2></li>
+                        <li class="promo__item"><p class="promo__number">4</p>
+                            <h2 class="promo__description">Года качественного сервиса</h2></li>
+                        <li class="promo__item"><p class="promo__number">7</p>
+                            <h2 class="promo__description">Сертифицированных специалистов</h2></li>
+                    </ul>
+                </div>
+                <div class="promo__buttons promo__buttons--2">
+                    <button class="button button--sign promo__button ms_booking">Записаться</button>
+                    <button onclick="window.open(`https://api.whatsapp.com/send/?phone=79027716974`)"
+                            class="button button--whatsapp promo__button">Написать в WhatsApp
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section class="about">
+        <div class="container"><h6
+                class="section__number about__number wow animate__animated animate__fadeInRight"><span
+                class="section__number--big">01</span> /06</h6>
+            <div class="about__content"><h2
+                    class="section__title about__title wow animate__animated animate__fadeInLeft">О
+                нас</h2>
+                <h3 class="section__subtitle about__subtitle wow animate__animated animate__fadeInLeft">Laser Zone</h3>
+                <p class="section__description about__description">Для максимального удаления волос в среднем необходим
+                    курс
+                    из 6-10 процедур с интервалом в месяц. Эффект наступает уже после ПЕРВОЙ процедуры - исчезает около
+                    30%
+                    волос, остальные замедляют свой рост и становятся тонкими и мягкими.</p>
+                <ul class="about__list">
+                    <li class="about__item advantage about__item--painless"><h4 class="advantage__title">
+                        Безболезненно</h4>
+                        <p class="advantage__text">Благодаря эффективной системе охлаждения вы не почувствуете ничего,
+                            кроме
+                            легкого покалывания.</p></li>
+                    <li class="about__item advantage about__item--security"><h4 class="advantage__title">Безопасно</h4>
+                        <p class="advantage__text">Вспышка лазерного луча воздействует локально на фолликул волоса, не
+                            затрагивая ткани, лимфоузлы и органы.</p></li>
+                    <li class="about__item advantage about__item--available"><h4 class="advantage__title">Доступно</h4>
+                        <p class="advantage__text">Лазерная эпиляция сэкономит вам 80% денег, которые вы потратили бы на
+                            другие способы удаления волос.</p></li>
+                </ul>
+            </div>
+            <button type="button"
+                    class="button button--sign about__button wow animate__animated animate__fadeInRight ms_booking">
+                Записаться
+            </button>
+        </div>
+    </section>
+    <section class="discounts">
+        <div class="container"><h6 class="section__number discounts__number wow animate__animated animate__fadeInRight">
+            <span class="section__number--big">02</span> /06</h6>
+            <h2 class="section__title discounts__title wow animate__animated animate__fadeInLeft">Акции</h2>
+            <h3 class="section__subtitle discounts__subtitle wow animate__animated animate__fadeInLeft">Начни эпиляцию в
+                Laser Zone выгодно</h3>
+            <p class="section__description discounts__description">Выбирай свою акцию на первую процедуру лазерной
+                эпиляции
+                и влюбись в свою новую гладкую кожу!</p>
+            <div class="swiper-container discounts__slider slider"><!-- Additional required wrapper -->
+                <div class="swiper-wrapper"><!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slider__item slide discounts__item discount">
+                            <div class="discount__top">
+                                <picture>
+                                    <source srcset="{% static 'img/content-images/classic+.webp' %}" type="image/webp">
+                                    <img src="{% static 'img/content-images/classic+.jpg' %}" alt="Laser Zone"
+                                         class="discount__img">
+                                </picture>
+                                <h4 class="discount__title">Комплекс «Сlassic+»</h4>
+                                <ul class="discount__list">
+                                    <li class="discount__item">Подмышечные впадины</li>
+                                    <li class="discount__item">Тотальное бикини</li>
+                                    <li class="discount__item">Голени</li>
+                                </ul>
+                            </div>
+                            <div class="discount__bottom">
+                                <div class="discount__prices"><span
+                                        class="discount__price discount__price--disable">3 500 ₽</span>
+                                    <p class="discount__price discount__price--active">2 490 ₽</p></div>
+                                <button class="discount__button ms_booking">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item slide discounts__item discount">
+                            <div class="discount__top">
+                                <picture>
+                                    <source srcset="{% static 'img/content-images/classic.webp' %}" type="image/webp">
+                                    <img src="{% static 'img/content-images/classic.jpg' %}" alt="Laser Zone"
+                                         class="discount__img">
+                                </picture>
+                                <h4 class="discount__title">Комплекс «Сlassic»</h4>
+                                <ul class="discount__list">
+                                    <li class="discount__item">Подмышечные впадины</li>
+                                    <li class="discount__item">Тотальное бикини</li>
+                                </ul>
+                            </div>
+                            <div class="discount__bottom">
+                                <div class="discount__prices"><span
+                                        class="discount__price discount__price--disable">2 400 ₽</span>
+                                    <p class="discount__price discount__price--active">1 490 ₽</p></div>
+                                <button class="discount__button ms_booking">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item slide discounts__item discount">
+                            <div class="discount__top">
+                                <picture>
+                                    <source srcset="{% static 'img/content-images/complex.webp' %}" type="image/webp">
+                                    <img src="{% static 'img/content-images/complex.jpg' %}" alt="Laser Zone"
+                                         class="discount__img">
+                                </picture>
+                                <h4 class="discount__title">Комплекс «Laser Zone»</h4>
+                                <ul class="discount__list">
+                                    <li class="discount__item">Подмышечные впадины</li>
+                                    <li class="discount__item">Тотальное бикини</li>
+                                    <li class="discount__item">Ноги полностью</li>
+                                </ul>
+                            </div>
+                            <div class="discount__bottom">
+                                <div class="discount__prices"><span
+                                        class="discount__price discount__price--disable">4 900 ₽</span>
+                                    <p class="discount__price discount__price--active">3 990 ₽</p></div>
+                                <button class="discount__button ms_booking">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item slide discounts__item discount">
+                            <div class="discount__top">
+                                <picture>
+                                    <source srcset="{% static 'img/content-images/procedure.webp' %}" type="image/webp">
+                                    <img src="{% static 'img/content-images/procedure.jpg' %}" alt="Laser Zone"
+                                         class="discount__img">
+                                </picture>
+                                <h4 class="discount__title">Процедура на зоны подмышечной впадины</h4>
+                                <ul class="discount__list">
+                                    <li class="discount__item">Подмышечные впадины</li>
+                                </ul>
+                            </div>
+                            <div class="discount__bottom">
+                                <div class="discount__prices"><span
+                                        class="discount__price discount__price--disable">1 000 ₽</span>
+                                    <p class="discount__price discount__price--active discount__Price--active-small">390
+                                        ₽</p></div>
+                                <button class="discount__button ms_booking">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discounts__swiper-pagination"></div>
+            </div>
+            <button class="button button--sign discounts__button" onclick="window.open(`./benefits.html`)">Посмотреть
+                все
+                акции
+            </button>
+        </div>
+    </section>
+    <div class="about__wave-container">
+        <svg class="about__wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                  d="M0,96L120,112C240,128,480,160,720,149.3C960,139,1200,85,1320,58.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+        </svg>
+    </div>
+    <div class="useful__bg">
+        <section class="reviews">
+            <div class="container"><h6
+                    class="section__number reviews__number wow animate__animated animate__fadeInRight">
+                <span class="section__number--big">03</span> /06</h6>
+                <h2 class="section__title reviews__title wow animate__animated animate__fadeInLeft">Отзывы</h2>
+                <h3 class="section__subtitle reviews__subtitle wow animate__animated animate__fadeInLeft">Нам важно ваше
+                    мнение</h3>
+                <p class="section__description reviews__description">Каждый день мы совершенствуемся, чтобы радовать Вас
+                    и
+                    Ваше тело нашим высоким профессионализмом.</p></div><!-- Slider main container -->
+            <div class="swiper-container reviews__slider slider"><!-- Additional required wrapper -->
+                <div class="swiper-wrapper"><!-- Slides -->
+                    <div class="swiper-slide reviews__slide--1">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Ольга</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Студия чистая и светлая. Персонал приветливый и очень эмпатичный.
+                                    <span class="slide__text--hidden">Перед первой процедурой волновалась, но мастер подробно разъяснил все нюансы и этапы работы. Сама процедура прошла в комфортной обстановке и дружелюбной атмосфере. После первого сеанса эффект отличный, «ушла» большая часть волос. Отдельно хочу отметить удобную схемы оплаты абонемента - в 3 платежа. Рекомендую :)</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Юлиана</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Как всегда - на высоте! Счастлива, что так долго искала салон и
+                                    нашла
+                                    такой идеальный. И результатом довольна, и подходом персонала. Всё чудесно.
+                                    Благодарю!</p></div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--3">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Александра</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Все прошло очень хорошо. Была на процедуре две недели назад.
+                                    <span
+                                            class="slide__text--hidden">И могу сказать, что результат с первого раза очень хороший. Я аж нарадоваться не могу. Советую. А до этого посещала другую лазерную студию, эффект был почти не заметен. Спасибо большое!</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--5">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Маргарита</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Хочу передать огромную радость за помощь в войне с ненавистными
+                                    волосами! <span class="slide__text--hidden">Война, которая длилась лет 15 точно((( и которая теперь точно заканчивается в мою пользу после 2 сеанса Лазерной эпиляции. Я в Восторге! Я теперь постоянный клиент!</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--6">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Ирина</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Отличный салон, замечательные девушки-сотрудницы, очень
+                                    внимательные,
+                                    заботливые, <span class="slide__text--hidden">профессионалы своего дела. Процедуры имеют положительный результат. Всем советую!</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--7">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img
+                                        src="{% static 'img/icons/in-love.svg" alt="Влюблённый смайлик"' %}
+                                                                   width=" 27" height="27" class="author__icon">
+                                    <p class="author__name">Яна</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Спасибо вам за процедуру. Очень довольна. Это была уже четвертая
+                                    и ни
+                                    разу не пожалела, <span class="slide__text--hidden">результат с первого раза. Бритвой пользуюсь только перед процедурой и то так на всякий случай. Девочки приветливые, милые, чуткие.</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--8">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Ольга</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Всё понравилось: комфортно, быстро, доступно объясняют, не больно
+                                    :)
+                                    Жду результатов, <span
+                                            class="slide__text--hidden">так как ходила только второй раз.</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide reviews__slide--9">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Ксения</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">После первой процедуры через 2 недели уже был виден ощутимый
+                                    эффект.
+                                    <span class="slide__text--hidden">Волосы стали расти медленнее и всего 30% от прежднего числа.</span><br>
+                                    <button class="slide__button slide__button--show">Читать дальше</button>
+                                    <button class="slide__button slide__button--hide">Cкрыть</button>
+                                </p>
+                            </div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item slide">
+                            <div class="slide__top">
+                                <div class="slide__author author"><img src="{% static 'img/icons/in-love.svg' %}"
+                                                                       alt="Влюблённый смайлик"
+                                                                       width="27" height="27" class="author__icon">
+                                    <p class="author__name">Дарья</p></div>
+                                <div class="slide__mark mark">
+                                    <div class="slide__mark--right"><p class="mark__ball">5,0</p>
+                                        <div class="mark__stars"><img src="{% static 'img/icons/star.svg' %}"
+                                                                      alt="Звезда" width="12"
+                                                                      height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"> <img
+                                                src="{% static 'img/icons/star.svg' %}" alt="Звезда" width="12"
+                                                height="12"
+                                                class="mark__star"> <img src="{% static 'img/icons/star.svg' %}"
+                                                                         alt="Звезда" width="12"
+                                                                         height="12" class="mark__star"></div>
+                                    </div>
+                                    <p class="mark__word mark__word--best">Превосходно</p></div>
+                                <p class="slide__text">Давольно-таки неплохо. Была только на одном посещении. Изменю
+                                    отзыв
+                                    после прохождения курса.</p></div>
+                            <p class="slide__copyright">Отзыв добавлен из <a
+                                    href="https://www.yclients.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=zapis_msk&utm_content=programma_dlya_salona_krasoty_otzyvy&utm_term=---autotargeting&roistat=direct7_search_6265809422_---autotargeting&roistat_referrer=none&roistat_pos=premium_1&yclid=2952322307638737090"
+                                    target="_blank" class="slide__link">yclients</a></p></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <div class="container"></div>
+    </div>
+    <div class="container">
+        <section class="price"><h6
+                class="section__number price__number wow animate__animated animate__fadeInRight"><span
+                class="section__number--big">04</span> /06</h6>
+            <h2 id="price" class="section__title price__title wow animate__animated animate__fadeInLeft">Стоимость
+                услуг</h2>
+            <div class="price__wrapper-table">
+                <h3 class="table__title table__title--1">Выгодные комплексы
+                    <svg class="table__arrow table__arrow--close table__arrow--1 table__arrow--green" id="SVGDoc1"
+                         width="16" height="10" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 10">
+                        <defs></defs>
+                        <g>
+                            <g><title>arrows</title>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M6.58571,8.58491v0l7.75978,-7.75981v0l1.41415,1.4142v0l-7.75978,7.75981v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M9.00774,8.6138v0l-7.62737,-7.6015v0l-1.39,1.38568v0l7.62726,7.60113v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </h3>
+                <table class="price__table table price__table--active price__table--1">
+                    <tbody>
+                    <tr class="table__header">
+                        <th class="table__head table__part--brown table__head--1">Комплекс (Зона)</th>
+                        <th class="table__head table__part--brown-light table__head--2">Одна процедура(разовая)</th>
+                        <th class="table__head table__part--brown table__head--3">Одна процедура при покупке абонемента
+                            на 6
+                            процедур
+                        </th>
+                    </tr>
+                    <tr class="table__part--white">
+                        <td class="table__content table__left"><b>Базовый</b><br>(Подмышечные впадины + голени)</td>
+                        <td class="table__content table__part--white">2 400 р.</td>
+                        <td class="table__content">1 950 р. / 11 700 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Classic</b><br>(Подмышечные впадины
+                            +
+                            Тотальное бикини)
+                        </td>
+                        <td class="table__content table__part--brown-light">2 400 р.</td>
+                        <td class="table__content table__part--brown">1 950 р. / 11 700 р.</td>
+                    </tr>
+                    <tr class="table__part--white">
+                        <td class="table__content table__left"><b>Classic +</b><br>(Подмышечные впадины +Голени +
+                            Тотальные
+                            бикини)
+                        </td>
+                        <td class="table__content">3 500 р.</td>
+                        <td class="table__content">2 900 р. / 17 400 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown table__part--brown"><b>Laser
+                            Zone</b><br>(Подмышечные
+                            впадины + Ноги полностью + Тотальные бикини)
+                        </td>
+                        <td class="table__content table__part--brown-light table__part--b-c">4 900 р.</td>
+                        <td class="table__content table__part--brown table__part--brown">3 950 р. / 23 700 р.</td>
+                    </tr>
+                    <tr class="table__space"></tr>
+                    <tr class="table__part--blue table__part--last">
+                        <td class="table__content table__left table__part--blue table__part--b-l table__part--new"><b>Всё
+                            тело</b><br>(Подмышечные впадины + Тотальное бикини + Ноги полностью + Руки до локтя + Линия
+                            живота + Стопы)
+                        </td>
+                        <td class="table__content table__part--blue table__part--b-c">5 990 р.</td>
+                        <td class="table__content table__part--blue table__part--b-r">4 990 р. / 29 940 р.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price__wrapper-table">
+                <h3 class="table__title table__title--2">Лицо и шея
+                    <svg class="table__arrow table__arrow--open table__arrow--2" id="SVGDoc2" width="16" height="10"
+                         xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 16 10">
+                        <defs></defs>
+                        <g>
+                            <g><title>arrows</title>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M6.58571,8.58491v0l7.75978,-7.75981v0l1.41415,1.4142v0l-7.75978,7.75981v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M9.00774,8.6138v0l-7.62737,-7.6015v0l-1.39,1.38568v0l7.62726,7.60113v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </h3>
+                <table class="price__table table price__table--2 animate__animated animate__fadeIn">
+                    <tbody>
+                    <tr class="table__header">
+                        <th class="table__head table__part--brown table__head--1">Лицо и шея</th>
+                        <th class="table__head table__part--brown-light table__head--2">Одна процедура(разовая)</th>
+                        <th class="table__head table__part--brown table__head--3">Одна процедура при покупке абонемента
+                            на 6
+                            процедур
+                        </th>
+                    </tr>
+                    <tr class="">
+                        <td class="table__content table__left"><b>Межбровье</b><span class="price__unvisible">aaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                        </td>
+                        <td class="table__content">300 р.</td>
+                        <td class="table__content">250 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Щёки</b></td>
+                        <td class="table__content table__part--brown-light">600 р.</td>
+                        <td class="table__content table__part--brown">500 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Верхняя губа</b></td>
+                        <td class="table__content">500 р.</td>
+                        <td class="table__content">400 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Подбородок</b></td>
+                        <td class="table__content table__part--brown-light">600 р.</td>
+                        <td class="table__content table__part--brown">500 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Шея</b> (Передняя и задняя поверхность)</td>
+                        <td class="table__content">1000 р.</td>
+                        <td class="table__content">800р. /4800 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown table__part--b-l"><b>Лицо</b>
+                            (Полностью)
+                        </td>
+                        <td class="table__content table__part--brown-light table__part--b-c">1000 р.</td>
+                        <td class="table__content table__part--brown table__part--b-r">800/4800 р.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price__wrapper-table">
+                <h3 class="table__title table__title--3">Тело
+                    <svg class="table__arrow table__arrow--open table__arrow--3" id="SVGDoc3" width="16" height="10"
+                         xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 16 10">
+                        <defs></defs>
+                        <g>
+                            <g><title>arrows</title>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M6.58571,8.58491v0l7.75978,-7.75981v0l1.41415,1.4142v0l-7.75978,7.75981v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M9.00774,8.6138v0l-7.62737,-7.6015v0l-1.39,1.38568v0l7.62726,7.60113v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </h3>
+                <table class="price__table table price__table--3 animate__animated animate__fadeIn">
+                    <tbody>
+                    <tr class="table__header">
+                        <th class="table__head table__part--brown table__head--1">Тело</th>
+                        <th class="table__head table__part--brown-light table__head--2">Одна процедура(разовая)</th>
+                        <th class="table__head table__part--brown table__head--3">Одна процедура при покупке абонемента
+                            на 6
+                            процедур
+                        </th>
+                    </tr>
+                    <tr class="">
+                        <td class="table__content table__left"><b>Декольте</b><span class="price__unvisible">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                        </td>
+                        <td class="table__content">1 200 р.</td>
+                        <td class="table__content">950 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Ореолы</b></td>
+                        <td class="table__content table__part--brown-light">400 р.</td>
+                        <td class="table__content table__part--brown">330 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Грудь полностью</b></td>
+                        <td class="table__content">1 300 р.</td>
+                        <td class="table__content">1 050 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Линия живота</b> (дорожка)</td>
+                        <td class="table__content table__part--brown-light">400 р.</td>
+                        <td class="table__content table__part--brown">300 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Живот</b> (Полностью)</td>
+                        <td class="table__content">1 000 р.</td>
+                        <td class="table__content">800 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Бикини классика</b></td>
+                        <td class="table__content table__part--brown-light">1 000 р.</td>
+                        <td class="table__content table__part--brown">700 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Бикини глубокое</b></td>
+                        <td class="table__content">1 800 р.</td>
+                        <td class="table__content">1 350 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Бикини тотальное</b></td>
+                        <td class="table__content table__part--brown-light">2 000 р.</td>
+                        <td class="table__content table__part--brown">1 450 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Поясница</b></td>
+                        <td class="table__content">1 600 р.</td>
+                        <td class="table__content">1 100 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown table__part--b-l"><b>Спина
+                            полностью</b>
+                        </td>
+                        <td class="table__content table__part--brown-light table__part--b-c">2 200 р.</td>
+                        <td class="table__content table__part--brown table__part--b-r">1 600 р.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price__wrapper-table">
+                <h3 class="table__title table__title--4">Руки
+                    <svg class="table__arrow table__arrow--open table__arrow--4" id="SVGDoc4" width="16" height="10"
+                         xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 16 10">
+                        <defs></defs>
+                        <g>
+                            <g><title>arrows</title>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M6.58571,8.58491v0l7.75978,-7.75981v0l1.41415,1.4142v0l-7.75978,7.75981v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M9.00774,8.6138v0l-7.62737,-7.6015v0l-1.39,1.38568v0l7.62726,7.60113v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </h3>
+                <table class="price__table table price__table--4 animate__animated animate__fadeIn">
+                    <tbody>
+                    <tr class="table__header">
+                        <th class="table__head table__part--brown table__head--1">Руки</th>
+                        <th class="table__head table__part--brown-light table__head--2">Одна процедура(разовая)</th>
+                        <th class="table__head table__part--brown table__head--3">Одна процедура при покупке абонемента
+                            на 6
+                            процедур
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Подмышечные впадины</b><span class="price__unvisible">aaaaaaaaaaaaaa</span>
+                        </td>
+                        <td class="table__content">1 000 р.</td>
+                        <td class="table__content">600 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Руки до локтя</b></td>
+                        <td class="table__content table__part--brown-light">1 600 р.</td>
+                        <td class="table__content table__part--brown">1 150 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Руки полностью</b></td>
+                        <td class="table__content">2 200 р.</td>
+                        <td class="table__content">1 550 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown table__part--b-l"><b>Кисти рук</b></td>
+                        <td class="table__content table__part--brown-light table__part--b-c">400 р.</td>
+                        <td class="table__content table__part--brown table__part--b-r">330 р.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price__wrapper-table">
+                <h3 class="table__title table__title--5">Ноги
+                    <svg class="table__arrow table__arrow--open table__arrow--5" id="SVGDoc5" width="16" height="10"
+                         xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 16 10">
+                        <defs></defs>
+                        <g>
+                            <g><title>arrows</title>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M6.58571,8.58491v0l7.75978,-7.75981v0l1.41415,1.4142v0l-7.75978,7.75981v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                                <g><title>Прямоугольник</title>
+                                    <path d="M9.00774,8.6138v0l-7.62737,-7.6015v0l-1.39,1.38568v0l7.62726,7.60113v0z"
+                                          fill="#e5e5e5" fill-opacity="1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </h3>
+                <table class="price__table table price__table--5 animate__animated animate__fadeIn">
+                    <tbody>
+                    <tr class="table__header">
+                        <th class="table__head table__part--brown table__head--1">Ноги</th>
+                        <th class="table__head table__part--brown-light table__head--2">Одна процедура(разовая)</th>
+                        <th class="table__head table__part--brown table__head--3">Одна процедура при покупке абонемента
+                            на 6
+                            процедур
+                        </th>
+                    </tr>
+                    <tr class="">
+                        <td class="table__content table__left"><b>Межъягодичная зона</b></td>
+                        <td class="table__content">400 р.</td>
+                        <td class="table__content">330 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Ягодицы</b></td>
+                        <td class="table__content table__part--brown-light">800 р.</td>
+                        <td class="table__content table__part--brown">650 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Голени</b> (включает колени)</td>
+                        <td class="table__content">2 000 р.</td>
+                        <td class="table__content">1 450 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown"><b>Бедра</b> (включает колени)</td>
+                        <td class="table__content table__part--brown-light">2 400 р.</td>
+                        <td class="table__content table__part--brown">2 000 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left"><b>Ноги полностью</b> (включает пальцы ног и стопы)</td>
+                        <td class="table__content">3 200 р.</td>
+                        <td class="table__content">2 700 р.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__content table__left table__part--brown table__part--b-l"><b>Стопы</b></td>
+                        <td class="table__content table__part--brown-light table__part--b-c">400 р.</td>
+                        <td class="table__content table__part--brown table__part--b-r">330 р.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button"
+                    class="button button--sign price__button wow animate__animated animate__fadeInRight ms_booking">
+                Записаться
+            </button>
+        </section>
+    </div>
+    <div class="reviews-contact-footer">
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#F5E9C3" fill-opacity="1"
+                  d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,203,1320,229.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+        <div class="container">
+            <section class="useful"><h6
+                    class="section__number useful__number wow animate__animated animate__fadeInRight">
+                <span class="section__number--big">05</span> /06</h6>
+                <h2 class="section__title useful__title wow animate__animated animate__fadeInLeft">Полезно знать</h2>
+                <h3 class="section__subtitle useful__subtitle wow animate__animated animate__fadeInLeft">Подготовьтесь к
+                    процедуре</h3>
+                <p class="section__description useful__description">Для того, чтобы процедура удаления волос была
+                    максимально эффективна для Вас, необходимо следующее:</p>
+                <ul class="useful__list">
+                    <li class="useful__item prepare useful__item--1"><h4 class="prepare__title">1-2 мм - рекомендуемая
+                        длина
+                        волоса</h4>
+                        <p class="useful__text">За сутки до процедуры волосы на обрабатываемой зоне необходимо
+                            сбрить.</p>
+                    </li>
+                    <li class="useful__item prepare useful__item--2"><h4 class="prepare__title">Не загорайте до
+                        процедуры</h4>
+                        <p class="useful__text">За 3 дня до и после процедуры откажитесь от посещения солярия.</p></li>
+                    <li class="useful__item prepare"><h4 class="prepare__title">Не проводите процедуры, нарушающие
+                        кожный
+                        покров</h4>
+                        <p class="useful__text">За 2 недели откажитесь от процедур травмирующих кожный покров (шугаринг,
+                            воск, эл.депилятор, пилинги, скрабировария и пр.)</p></li>
+                </ul>
+                <h3 class="section__subtitle versus__subtitle">Противопоказания</h3>
+                <ul class="versus__list">
+                    <li class="versus__item versus"><p class="versus__text">Беременность и период грудного
+                        вскармливания</p>
+                    </li>
+                    <li class="versus__item"><p class="versus__text">Любые гормональные отклонения</p></li>
+                    <li class="versus__item"><p class="versus__text">Заболевания кожи в острой форме</p></li>
+                    <li class="versus__item"><p class="versus__text">Онкологические заболевания</p></li>
+                    <li class="versus__item"><p class="versus__text">Декомпенсированный сахарный диабет</p></li>
+                    <li class="versus__item"><p class="versus__text">Эпилепсия</p></li>
+                </ul>
+                <button type="button"
+                        class="button button--sign useful__button wow animate__animated animate__fadeInRight ms_booking">
+                    Записаться
+                </button>
+            </section>
+            <section class="contact"><h6 class="section__number wow animate__animated animate__fadeInRight"><span
+                    class="section__number--big">06</span> /06</h6>
+                <h2 class="section__title contact__title wow animate__animated animate__fadeInLeft">Контакты</h2>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <div class="contact__adress"><h3 class="adress__title">Адрес</h3>
+                            <p class="adress__text">г. Петрозаводск, ул. Попова, д. 13А</p></div>
+                        <div class="contact__map contact__map--mobile">
+                            <div class="modal-map__base" style="position:relative;overflow:hidden;"><a
+                                    href="https://yandex.ru/maps/org/laser_zone/240237342669/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Laser Zone</a><a
+                                    href="https://yandex.ru/maps/18/petrozavodsk/category/laser_hair_removal/240441342749/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Лазерная эпиляция в
+                                Петрозаводске</a><a
+                                    href="https://yandex.ru/maps/18/petrozavodsk/category/beauty_salon/184105814/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:28px;">Салон красоты в
+                                Петрозаводске</a>
+                                <iframe class="contact__frame--mobile"
+                                        src="https://yandex.ru/map-widget/v1/-/CCUBUWbqdC"
+                                        frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                            </div>
+                        </div>
+                        <div class="contact__phone"><h3 class="phone__title">Телефон</h3>
+                            <p class="phone__text">+7 902 771 69 74</p></div>
+                        <div class="contact__links"><a href="https://www.instagram.com/laser_zone_ptz/"
+                                                       class="contact__link contact__link--instagram"><img
+                                src="{% static 'img/icons/instagram.svg' %}" alt="Instagram"
+                                class="contact__img--instagram"> </a><a
+                                href="https://vk.com/laserzone" class="contact__link"><img
+                                src="{% static 'img/icons/vk.svg' %}" alt="VK"
+                                class="contact__img--vk"></a>
+                        </div>
+                    </div>
+                    <div class="contact__map contact__map--desktop">
+                        <div class="modal-map__base" style="position:relative;overflow:hidden;"><a
+                                href="https://yandex.ru/maps/org/laser_zone/240237342669/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:0px;">Laser Zone</a><a
+                                href="https://yandex.ru/maps/18/petrozavodsk/category/laser_hair_removal/240441342749/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:14px;">Лазерная эпиляция в
+                            Петрозаводске</a><a
+                                href="https://yandex.ru/maps/18/petrozavodsk/category/beauty_salon/184105814/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:28px;">Салон красоты в
+                            Петрозаводске</a>
+                            <iframe class="contact__frame--desktop" src="https://yandex.ru/map-widget/v1/-/CCUBUWbqdC"
+                                    width="665" height="340" frameborder="1" allowfullscreen="true"
+                                    style="position:relative;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% include 'footer.html' %}
+        </div>
+        <div class="container">
+            <section class="modal-map">
+                <div class="modal-map__overlay animate__animated animate__fadeIn">
+                    <div class="modal-map__wrapper">
+                        <button type="button" class="modal-map__close">
+                            <svg class="t-popup__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5176 18.6142L5.38633 6.48291C5.24102 6.3376 5.24102 6.09854 5.38633 5.95322L5.94883 5.39072C6.09414 5.24541 6.3332 5.24541 6.47851 5.39072L18.6098 17.522C18.7551 17.6673 18.7551 17.9064 18.6098 18.0517L18.0473 18.6142C17.9019 18.7595 17.6629 18.7595 17.5176 18.6142Z"
+                                      fill="black"></path>
+                                <path d="M18.6137 6.48291L6.48242 18.6142C6.33711 18.7595 6.09805 18.7595 5.95274 18.6142L5.39023 18.0517C5.24492 17.9064 5.24492 17.6673 5.39023 17.522L17.5215 5.39072C17.6668 5.24541 17.9059 5.24541 18.0512 5.39072L18.6137 5.95322C18.759 6.09854 18.759 6.3376 18.6137 6.48291Z"
+                                      fill="black"></path>
+                            </svg>
+                        </button>
+                        <div class="contact-map__base">
+                            <div class="modal-map__base" style="position:relative;overflow:hidden;"><a
+                                    href="https://yandex.ru/maps/org/laser_zone/240237342669/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Laser Zone</a><a
+                                    href="https://yandex.ru/maps/18/petrozavodsk/category/laser_hair_removal/240441342749/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Лазерная эпиляция в
+                                Петрозаводске</a><a
+                                    href="https://yandex.ru/maps/18/petrozavodsk/category/beauty_salon/184105814/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:28px;">Салон красоты в
+                                Петрозаводске</a>
+                                <iframe class="modal-map__frame" src="https://yandex.ru/map-widget/v1/-/CCUBUWbqdC"
+                                        width="980"
+                                        height="475" frameborder="1" allowfullscreen="true"
+                                        style="position:relative;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="{% static 'js/index-script.js' %}"></script>
+        <script src="{% static 'js/wow.min.js' %}" defer=""></script>
+        <script src="{% static 'js/benefits-script.js' %}" defer=""></script></div>
+    </body>
+{% endblock %}

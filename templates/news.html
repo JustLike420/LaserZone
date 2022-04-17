@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body class="news-page">
+    <div class="container">
+        <header class="header animate__animated animate__fadeInDown"><a href="./index.html" class="logo-link">
+            <picture>
+                <source srcset="{% static 'img/logotypes/logo.svg' %}" type="image/svg">
+                <img src="{% static 'img/logotypes/logo.png' %}" alt="Laser zone" width="157" height="36"
+                     class="header__logo">
+            </picture>
+        </a>
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href=".index.html#price" class="nav__link">Стоимость услуг</a></li>
+                    <li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="{% url 'news' %}" class="nav__link nav__link--active">Новости</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__ap"><p class="header__adress button--map">Петрозаводск,<br>ул. Попова, д. 13А</p>
+                <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8 902
+                    771-69-74</a></p>
+                    <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+                <div class="header__right"><a class="header__tel" href="tel:+79027716974"><img
+                        src="{% static 'img/icons/dark-call.svg' %}"
+                        alt="Телефон" width="24px"
+                        height="24px"
+                        class="header__tel"> </a>
+                    <button class="header__burger"><img src="{% static 'img/icons/menu.svg' %}" alt="Открыть меню"
+                                                        width="24px"
+                                                        height="24px"></button>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <nav class="nav header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./index.html#price" class="nav__link">Стоимость услуг</a></li>
+                        <li class="nav__item"><a href="./benefits.html" class="nav__link">Акции</a></li>
+                        <li class="nav__item"><a href="./news.html" class="nav__link nav__link--active">Новости</a></li>
+                    </ul>
+                </nav>
+                <p class="header__adress">Петрозаводск,<br>ул.Попова, д. 13А</p>
+                <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8 902
+                    771-69-74</a></p>
+                    <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+            </div>
+        </header>
+        <main><h2 class="section__title news__title wow animate__animated animate__fadeInLeft">Новости</h2>
+            {% for post in posts %}
+                <div class="news__item">
+                    <div class="news__text-content"><p class="news__paragraph">{{ post.text|safe }}</p>
+                        <p class="news__date">{{ post.date }}</p></div>
+                    <img src="{{ post.photo.url }}" alt="News photo" class="news__img">
+                </div>
+            {% endfor %}
+        </main>
+        <div class="news__pagination">
+            {% if page_obj.has_other_pages %}
+                <ul class="news__pages">
+                    {% if page_obj.has_previous %}
+                        <button class="news__button news__button--prev"><a
+                                href="?page={{ page_obj.previous_page_number }}"
+                                style="text-decoration: none;">Назад</a></button>
+                    {% else %}
+                        <button class="news__button news__button--prev news__button--disable">Назад</button>
+                    {% endif %}
+
+                    {% for p in page_obj.paginator.page_range %}
+                        {% if page_obj.number == p %}
+                            <li class="news__page news__page--active"><a href="?page={{ p }}"
+                                                                         class="undecorated-link">{{ p }}</a></li>
+                        {% elif p > page_obj.number|add:-6 and p < page_obj.number|add:6 %}
+                            <li class="news__page"><a href="?page={{ p }}" class="undecorated-link">{{ p }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+
+                        {#                            <button class="news__button news__button--next">#}
+                        <a href="?page={{ page_obj.next_page_number }}" style="text-decoration: none;"
+                           class="news__button news__button--next">Дальше</a>
+                        {#                            </button>#}
+                    {% else %}
+                        <button class="news__button news__button--next news__button--disable">Дальше</button>
+                    {% endif %}
+                </ul>
+
+            {% endif %}
+        </div>
+        {#        <div class="news__pagination">#}
+        {#            <button class="news__button news__button--prev news__button--disable">Назад</button>#}
+        {#            <ul class="news__pages">#}
+        {#                <li class="news__page news__page--active"><a href="#" class="undecorated-link">1</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">2</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">3</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">4</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">5</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">6</a></li>#}
+        {#                <li class="news__page"><a href="#" class="undecorated-link">7</a></li>#}
+        {#            </ul>#}
+        {#            <button class="news__button news__button--next">Дальше</button>#}
+        {#        </div>#}
+        <footer class="footer news-page__footer wow animate__animated animate__fadeInUp"><a href="./index.html"
+                                                                                            class="logo-link">
+            <picture>
+                <source srcset="{% static 'img/logotypes/logo.webp' %}" type="image/webp">
+                <img src="{% static 'img/logotypes/logo.png' %}" alt="Laser Zone" class="logo footer__logo"></picture>
+        </a>
+            <nav class="nav footer__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#price" class="nav__link">Стоимость услуг</a></li>
+                    <li class="nav__item"><a href="./benefits.html" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="./news.html" class="nav__link nav__link--active">Новости</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Франшиза</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="footer__button button--map"><img src="{% static 'img/icons/geo.svg' %}"
+                                                                          alt="Местоположение"
+                                                                          width="24" height="24" class="footer__geo">
+                Петрозаводск
+            </button>
+        </footer>
+        <img src="{% static 'img/logotypes/cidgital_logo.svg' %}" alt="cidgital"
+             class="production-logo wow animate__animated animate__fadeInUp"></div>
+    <section class="modal-map">
+        <div class="modal-map__overlay animate__animated animate__fadeIn">
+            <div class="modal-map__wrapper">
+                <button type="button" class="modal-map__close">
+                    <svg class="t-popup__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5176 18.6142L5.38633 6.48291C5.24102 6.3376 5.24102 6.09854 5.38633 5.95322L5.94883 5.39072C6.09414 5.24541 6.3332 5.24541 6.47851 5.39072L18.6098 17.522C18.7551 17.6673 18.7551 17.9064 18.6098 18.0517L18.0473 18.6142C17.9019 18.7595 17.6629 18.7595 17.5176 18.6142Z"
+                              fill="black"></path>
+                        <path d="M18.6137 6.48291L6.48242 18.6142C6.33711 18.7595 6.09805 18.7595 5.95274 18.6142L5.39023 18.0517C5.24492 17.9064 5.24492 17.6673 5.39023 17.522L17.5215 5.39072C17.6668 5.24541 17.9059 5.24541 18.0512 5.39072L18.6137 5.95322C18.759 6.09854 18.759 6.3376 18.6137 6.48291Z"
+                              fill="black"></path>
+                    </svg>
+                </button>
+                <div class="contact-map__base">
+                    <div class="modal-map__base" style="position:relative;overflow:hidden;"><a
+                            href="https://yandex.ru/maps/org/laser_zone/240237342669/?utm_medium=mapframe&utm_source=maps"
+                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Laser Zone</a><a
+                            href="https://yandex.ru/maps/18/petrozavodsk/category/laser_hair_removal/240441342749/?utm_medium=mapframe&utm_source=maps"
+                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Лазерная эпиляция в
+                        Петрозаводске</a><a
+                            href="https://yandex.ru/maps/18/petrozavodsk/category/beauty_salon/184105814/?utm_medium=mapframe&utm_source=maps"
+                            style="color:#eee;font-size:12px;position:absolute;top:28px;">Салон красоты в
+                        Петрозаводске</a>
+                        <iframe class="modal-map__frame" src="https://yandex.ru/map-widget/v1/-/CCUBUWbqdC" width="980"
+                                height="475" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'js/index-script.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}" defer=""></script>
+    <script src="{% static 'js/benefits-script.js' %}" defer=""></script>
+    </body>
+{% endblock %}

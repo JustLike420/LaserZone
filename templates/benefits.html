@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="benefits-page">
+<div class="container">
+    <header class="header animate__animated animate__fadeInDown"><a href="{% url 'index' %}" class="logo-link">
+        <picture>
+            <source srcset="{% static 'img/logotypes/logo.svg'%}" type="image/svg">
+            <img src="{% static 'img/logotypes/logo.png'%}" alt="Laser zone" width="157" height="36" class="header__logo"></picture>
+    </a>
+        <nav class="nav header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'index' %}#price" class="nav__link">Стоимость услуг</a></li>
+                <li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link nav__link--active">Акции</a></li>
+                <li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
+            </ul>
+        </nav>
+        <div class="header__ap"><p class="header__adress button--map">Петрозаводск,<br>ул. Попова, д. 13А</p>
+            <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8 902
+                771-69-74</a></p>
+                <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+            <div class="header__right"><a class="header__tel" href="tel:+79027716974"><img src="{% static 'img/icons/dark-call.svg'%}"
+                                                                                           alt="Телефон" width="24px"
+                                                                                           height="24px"
+                                                                                           class="header__tel"> </a>
+                <button class="header__burger"><img src="{% static 'img/icons/menu.svg'%}" alt="Открыть меню" width="24px"
+                                                    height="24px"></button>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html#price" class="nav__link">Стоимость услуг</a></li>
+                    <li class="nav__item"><a href="./benefits.html" class="nav__link nav__link--active">Акции</a></li>
+                    <li class="nav__item"><a href="./news.html" class="nav__link">Новости</a></li>
+                </ul>
+            </nav>
+            <p class="header__adress">Петрозаводск,<br>ул.Попова, д. 13А</p>
+            <div class="header__phone"><p class="header__number"><a href="tel:+79027716974" class="phone-link">8 902
+                771-69-74</a></p>
+                <p class="header__clock">ежедневно с 10:00 - 20:00</p></div>
+        </div>
+    </header>
+    <section class="benefits"><h2 class="section__title benefits__title wow animate__animated animate__fadeInLeft">
+        Акции</h2>
+        <div class="benefits__profits">
+            <div class="profits__item profit profit--1 profit--right">
+                <div class="profit__top"><h4 class="discount__title profit__title">Комплекс «Сlassic»</h4>
+                    <ul class="discount__list">
+                        <li class="discount__item">Подмышечные впадины</li>
+                        <li class="discount__item">Тотальное бикини</li>
+                    </ul>
+                </div>
+                <div class="profit__bottom">
+                    <div class="discount__prices"><span class="discount__price discount__price--disable">2 400 ₽</span>
+                        <p class="discount__price discount__price--active">1 490 ₽</p></div>
+                    <button class="discount__button ms_booking">Записаться</button>
+                </div>
+            </div>
+            <div class="profits__item profit profit--2 profit--left">
+                <div class="profit__top"><h4 class="discount__title profit__title">Комплекс «Laser Zone»</h4>
+                    <ul class="discount__list">
+                        <li class="discount__item">Подмышечные впадины</li>
+                        <li class="discount__item">Тотальное бикини</li>
+                        <li class="discount__item">Ноги полностью</li>
+                    </ul>
+                </div>
+                <div class="profit__bottom">
+                    <div class="discount__prices"><span class="discount__price discount__price--disable">4 900 ₽</span>
+                        <p class="discount__price discount__price--active">3 990 ₽</p></div>
+                    <button class="discount__button ms_booking">Записаться</button>
+                </div>
+            </div>
+            <div class="profits__item profit profit--3 profit--right">
+                <div class="profit__top"><h4 class="discount__title profit__title">Процедура на зоны подмышечной
+                    впадины</h4>
+                    <ul class="discount__list">
+                        <li class="discount__item">Подмышечные впадины</li>
+                    </ul>
+                </div>
+                <div class="profit__bottom">
+                    <div class="discount__prices"><span class="discount__price discount__price--disable">1 000 ₽</span>
+                        <p class="discount__price discount__price--active discount__price--active-small">390 ₽</p></div>
+                    <button class="discount__button ms_booking">Записаться</button>
+                </div>
+            </div>
+            <div class="profits__item profit profit--4 profit--left">
+                <div class="profit__top"><h4 class="discount__title profit__title">Комплекс «Сlassic+»</h4>
+                    <ul class="discount__list">
+                        <li class="discount__item">Подмышечные впадины</li>
+                        <li class="discount__item">Тотальное бикини</li>
+                        <li class="discount__item">Голени</li>
+                    </ul>
+                </div>
+                <div class="profit__bottom">
+                    <div class="discount__prices"><span class="discount__price discount__price--disable">3 500 ₽</span>
+                        <p class="discount__price discount__price--active">2 490 ₽</p></div>
+                    <button class="discount__button ms_booking">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="benefits__links">
+        <div class="benefits__follow"><p class="benefits__action">Следите за актуальными ацкиями</p>
+            <div class="contact__links"><a href="https://www.instagram.com/laser_zone_ptz/"
+                                           class="contact__link contact__link--instagram"><img
+                    src="{% static 'img/icons/instagram.svg'%}" alt="Instagram" class="contact__img--instagram"> </a><a
+                    href="https://vk.com/laserzone" class="contact__link"><img src="{% static 'img/icons/vk.svg'%}" alt="VK"
+                                                                               class="contact__img--vk"></a></div>
+        </div>
+        <div><p class="benefits__action">Задайте интересующие вопросы</p>
+            <div class="benefits__ask"><a href="tel:+79027716974" class="ask__phone"><img src="{% static 'img/icons/call.svg'%}"
+                                                                                          alt="Телефон">
+                <p class="ask__text">+7 902 771 69 74</p></a><a href="https://api.whatsapp.com/send/?phone=79027716974"
+                                                                class="contact__link"><img
+                    src="{% static 'img/icons/whatsapp-light.svg'%}" alt="WhatsApp"></a></div>
+        </div>
+    </section>
+
+    <footer class="footer benefits-page__footer wow animate__animated animate__fadeInUp"><a href="./index.html"
+																														 class="logo-link">
+		<picture>
+			<source srcset="{% static 'img/logotypes/logo.webp'%}" type="image/webp">
+			<img src="{% static 'img/logotypes/logo.png'%}" alt="Laser Zone" class="logo footer__logo"></picture>
+	</a>
+		<nav class="nav footer__nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="/#price" class="nav__link">Стоимость услуг</a></li>
+				<li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link nav__link--active">Акции</a></li>
+				<li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Франшиза</a></li>
+			</ul>
+		</nav>
+		<button type="button" class="footer__button button--map"><img src="{% static 'img/icons/geo.svg'%}" alt="Местоположение"
+																						  width="24" height="24" class="footer__geo">
+			Петрозаводск
+		</button>
+	</footer>
+	<img src="{% static 'img/logotypes/cidgital_logo.svg'%}" alt="cidgital"
+		  class="production-logo wow animate__animated animate__fadeInUp"></div>
+
+<section class="modal-map">
+    <div class="modal-map__overlay animate__animated animate__fadeIn">
+        <div class="modal-map__wrapper">
+            <button type="button" class="modal-map__close">
+                <svg class="t-popup__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5176 18.6142L5.38633 6.48291C5.24102 6.3376 5.24102 6.09854 5.38633 5.95322L5.94883 5.39072C6.09414 5.24541 6.3332 5.24541 6.47851 5.39072L18.6098 17.522C18.7551 17.6673 18.7551 17.9064 18.6098 18.0517L18.0473 18.6142C17.9019 18.7595 17.6629 18.7595 17.5176 18.6142Z"
+                          fill="black"></path>
+                    <path d="M18.6137 6.48291L6.48242 18.6142C6.33711 18.7595 6.09805 18.7595 5.95274 18.6142L5.39023 18.0517C5.24492 17.9064 5.24492 17.6673 5.39023 17.522L17.5215 5.39072C17.6668 5.24541 17.9059 5.24541 18.0512 5.39072L18.6137 5.95322C18.759 6.09854 18.759 6.3376 18.6137 6.48291Z"
+                          fill="black"></path>
+                </svg>
+            </button>
+            <div class="contact-map__base">
+                <div class="modal-map__base" style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/org/laser_zone/240237342669/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Laser Zone</a><a
+                        href="https://yandex.ru/maps/18/petrozavodsk/category/laser_hair_removal/240441342749/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Лазерная эпиляция в
+                    Петрозаводске</a><a
+                        href="https://yandex.ru/maps/18/petrozavodsk/category/beauty_salon/184105814/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Салон красоты в Петрозаводске</a>
+                    <iframe class="modal-map__frame" src="https://yandex.ru/map-widget/v1/-/CCUBUWbqdC" width="980"
+                            height="475" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <script src="{% static 'js/index-script.js' %}"></script>
+        <script src="{% static 'js/wow.min.js' %}" defer=""></script>
+        <script src="{% static 'js/benefits-script.js' %}" defer=""></script>
+</body>
+{% endblock %}
