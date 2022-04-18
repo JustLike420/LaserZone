@@ -10,7 +10,7 @@
     </a>
         <nav class="nav header__nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="{% url 'index' %}#price" class="nav__link">Стоимость услуг</a></li>
+                <li class="nav__item"><a href="{% url 'index' %}" class="nav__link">Стоимость услуг</a></li>
                 <li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link nav__link--active">Акции</a></li>
                 <li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
             </ul>
@@ -30,9 +30,9 @@
         <div class="header__mobile">
             <nav class="nav header__nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="./index.html#price" class="nav__link">Стоимость услуг</a></li>
-                    <li class="nav__item"><a href="./benefits.html" class="nav__link nav__link--active">Акции</a></li>
-                    <li class="nav__item"><a href="./news.html" class="nav__link">Новости</a></li>
+                    <li class="nav__item"><a href="{% url 'index' %}" class="nav__link">Стоимость услуг</a></li>
+                    <li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link nav__link--active">Акции</a></li>
+                    <li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
                 </ul>
             </nav>
             <p class="header__adress">Петрозаводск,<br>ул.Попова, д. 13А</p>
@@ -125,7 +125,7 @@
 	</a>
 		<nav class="nav footer__nav">
 			<ul class="nav__list">
-				<li class="nav__item"><a href="/#price" class="nav__link">Стоимость услуг</a></li>
+				<li class="nav__item"><a href="{% url 'index' %}" class="nav__link">Стоимость услуг</a></li>
 				<li class="nav__item"><a href="{% url 'benefits' %}" class="nav__link nav__link--active">Акции</a></li>
 				<li class="nav__item"><a href="{% url 'news' %}" class="nav__link">Новости</a></li>
 				<li class="nav__item"><a href="#" class="nav__link">Франшиза</a></li>
