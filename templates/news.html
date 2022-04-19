@@ -50,12 +50,12 @@
             {% for post in posts %}
                 <div class="news__item">
                     <div class="news__text-content"><p class="news__paragraph">{{ post.text|safe }}</p>
-                        <p class="news__date">{{ post.date }}</p></div>
+                        <p class="news__date">{{ post.data }}</p></div>
                     {% if post.video %}
 {#                        {{ post.video.url }}#}
                         <iframe src="{{ post.video }}2" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     {% else %}
-                        <img src="{{ post.photo.url }}" alt="News photo" class="news__img">
+                        <img src="{{ post.photo.url }}" width="640" height="360" alt="News photo" class="news__img">
                     {% endif %}
                 </div>
             {% endfor %}
@@ -64,11 +64,11 @@
             {% if page_obj.has_other_pages %}
                 <ul class="news__pages">
                     {% if page_obj.has_previous %}
-                        <button class="news__button news__button--prev"><a
+                        <a class="news__button news__button--prev"
                                 href="?page={{ page_obj.previous_page_number }}"
-                                style="text-decoration: none;">Назад</a></button>
+                                style="text-decoration: none;">Назад</a>
                     {% else %}
-                        <button class="news__button news__button--prev news__button--disable">Назад</button>
+                        <a class="news__button news__button--prev news__button--disable">Назад</a>
                     {% endif %}
 
                     {% for p in page_obj.paginator.page_range %}
@@ -93,19 +93,6 @@
 
             {% endif %}
         </div>
-        {#        <div class="news__pagination">#}
-        {#            <button class="news__button news__button--prev news__button--disable">Назад</button>#}
-        {#            <ul class="news__pages">#}
-        {#                <li class="news__page news__page--active"><a href="#" class="undecorated-link">1</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">2</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">3</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">4</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">5</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">6</a></li>#}
-        {#                <li class="news__page"><a href="#" class="undecorated-link">7</a></li>#}
-        {#            </ul>#}
-        {#            <button class="news__button news__button--next">Дальше</button>#}
-        {#        </div>#}
         <footer class="footer news-page__footer wow animate__animated animate__fadeInUp"><a href="./index.html"
                                                                                             class="logo-link">
             <picture>
